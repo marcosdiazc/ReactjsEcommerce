@@ -1,26 +1,16 @@
-import logo from './logo.svg';
 import './App.css';
+import { NavBar } from './components/navBar/navBar'
 
-function App() {
+export const App = () => {
+  const sayName = () => alert("Codershop es barato")
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <h1>Coderhouse</h1>
-        <p>
-          Clase 2
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className='App'>
+      <NavBar />
+      
+      <button onClick={sayName}>Comprar</button>
     </div>
-  );
+  )
+
 }
 
-export default App;
