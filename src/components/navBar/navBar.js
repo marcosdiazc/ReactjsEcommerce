@@ -1,18 +1,15 @@
+import styles from './navBar.module.css'
+import { CartWidget } from '../CartWidget/CartWidget';
+
 export const NavBar = () => {
   return (
-    <nav className="navbar">
+    <nav className={styles.navBar}>
       <p>Codershop</p>
-
-      <ul>
-        <li>
-          <a href="#">Libros</a>
-        </li>
-        <li>
-          <a href="#">Tecnologia</a>
-        </li>
-        <li>
-          <a href="#">Hogar</a>
-        </li>
+      <ul className= {styles.links}>
+        <li>Libros</li>
+        <li>Tecnologia</li>
+        <li>Hogar</li>
+        <li>Deportes</li>
       </ul>
     </nav>
   );
