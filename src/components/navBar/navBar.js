@@ -1,7 +1,7 @@
 import styles from './navBar.module.css'
 import { CartWidget } from '../CartWidget/CartWidget';
 
-export const NavBar = () => {
+export const NavBar = ({ greeting }) => {
   return (
     <nav className={styles.navBar}>
       <p>Codershop</p>
@@ -11,6 +11,8 @@ export const NavBar = () => {
         <li>Hogar</li>
         <li>Deportes</li>
       </ul>
+      <img src='CartWidget/CartWidget.jpg'></img>
+
     </nav>
   );
 };
