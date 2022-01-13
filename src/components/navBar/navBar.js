@@ -1,18 +1,40 @@
-import styles from './navBar.module.css'
-import { CartWidget } from '../CartWidget/CartWidget';
+/*import styles from './navBar.module.css'*/
+import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
+import CartWidget from "./CartWidget";
 
 export const NavBar = ({ greeting }) => {
   return (
-    <nav className={styles.navBar}>
-      <p>Codershop</p>
-      <ul className= {styles.links}>
-        <li>Libros</li>
-        <li>Tecnologia</li>
-        <li>Hogar</li>
-        <li>Deportes</li>
-      </ul>
-      <img src='CartWidget/CartWidget.jpg'></img>
+    <Navbar collapseOnSelect expand="lg" bg="dark" variant="dark">
+      <Container>
+        <Navbar.Brand href="#home">Codershop</Navbar.Brand>
+        <Navbar.Toggle aria-controls="responsive-navbar-nav" />
+        <Navbar.Collapse id="responsive-navbar-nav">
+          <Nav className="me-auto">
+            <Nav.Link href="#features">Libros</Nav.Link>
+            <Nav.Link href="#pricing">Tecnologia</Nav.Link>
+            <NavDropdown title="Dropdown" id="collasible-nav-dropdown">
+              <NavDropdown.Item href="#action/3.1">Hogar</NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.2">
+                Muebleria
+              </NavDropdown.Item>
+              <NavDropdown.Item href="#action/3.3">Deportes</NavDropdown.Item>
+              <NavDropdown.Divider />
+              <NavDropdown.Item href="#action/3.4">
+                Separated link
+              </NavDropdown.Item>
+            </NavDropdown>
+          </Nav>
+          <Nav>
+            <Nav.Link href="#deets">Mas</Nav.Link>
+            <Nav.Link eventKey={2} href="#memes">
+              <CartWidget />
+            </Nav.Link>
+          </Nav>
+        </Navbar.Collapse>
+      </Container>
+    </Navbar>
 
-    </nav>
   );
 };
+
+export default NavBar;

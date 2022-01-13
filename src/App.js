@@ -4,6 +4,7 @@ import { Title } from "./components/title/title";
 import { Section } from "./components/section/section";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import { ItemCount } from "./components/ItemCount/ItemCount";
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 
 export const App = () => {
@@ -17,10 +18,10 @@ export const App = () => {
 
   return (
     <div className="App">
-
-      <NavBar />
+      <NavBar greeting="Hola" />
+      
       <ItemCount count={productsFiltered.length} />
-      <ItemListContainer />
+      <ItemListContainer greeting='Este es el greeting'/>
       <Section title="welcome">
         <p>Esta seccion es de bienvenida</p>
       </Section>
@@ -34,8 +35,8 @@ export const App = () => {
         
       </Section>
       
-      <Title text="Welcome" onClick={sayName} />
-      <Title text="Productos" color="blue" onClick={sayName} />
     </div>
   );
 };
+
+export default App;

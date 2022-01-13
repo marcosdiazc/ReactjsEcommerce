@@ -1,4 +1,5 @@
 import { Title } from "../title/title"
+import "./section.css";
 
 
 export const Section = ({ children, title }) => {

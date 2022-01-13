@@ -1,7 +1,13 @@
-export const ItemListContainer = ({ color = "peru", text = "no tiene texto", onClick, greeting }) => {
-    return (
-      <h1 style={{ color }} onClick={onClick}>
-        {text}
-      </h1>
-    );
-  };
+export const ItemListContainer = ({greeting}) => {
+  
+  return (
+    //lo que queremos que se renderice
+    <div>
+    <h1>Soy el ItemListContainer</h1>
+    <h2>Esto es una lista de productos</h2>
+    <h3>{greeting}</h3>
+    </div>
+  );
+};
+
+export default ItemListContainer;
