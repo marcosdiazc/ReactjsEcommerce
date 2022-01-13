@@ -3,6 +3,8 @@ import { NavBar } from "./components/navBar/navBar";
 import { Title } from "./components/title/title";
 import { Section } from "./components/section/section";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
+import { ItemCount } from "./components/ItemCount/ItemCount";
+
 
 export const App = () => {
   const sayName = () => alert("Codershop es barato");
@@ -17,6 +19,7 @@ export const App = () => {
     <div className="App">
 
       <NavBar />
+      <ItemCount count={productsFiltered.length} />
       <ItemListContainer />
       <Section title="welcome">
         <p>Esta seccion es de bienvenida</p>
