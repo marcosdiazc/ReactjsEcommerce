@@ -2,7 +2,6 @@ import "./App.css";
 import { NavBar } from "./components/navBar/navBar";
 import { Section } from "./components/section/section";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import { ItemCount } from "./components/ItemListContainer/ItemCount";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
@@ -18,9 +17,7 @@ export const App = () => {
   return (
     <div className="App">
       <NavBar greeting="Hola" />
-      
-      <ItemCount count={productsFiltered.length} />
-      <ItemListContainer greeting='Este es el greeting'/>
+      <ItemListContainer greeting="bienvenidos a codershop"/>
       <Section title="welcome">
         <p>Esta seccion es de bienvenida</p>
       </Section>
