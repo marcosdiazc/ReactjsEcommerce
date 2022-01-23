@@ -1,9 +1,8 @@
 import "./App.css";
 import { NavBar } from "./components/navBar/navBar";
-import { Title } from "./components/title/title";
 import { Section } from "./components/section/section";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
-import { ItemCount } from "./components/ItemCount/ItemCount";
+import { ItemCount } from "./components/ItemListContainer/ItemCount";
 import 'bootstrap/dist/css/bootstrap.min.css';
 
 
