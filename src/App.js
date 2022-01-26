@@ -7,6 +7,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import ItemList from "./components/ItemListContainer/ItemList";
 import Swal from 'sweetalert2';
 import ItemDetailContainer from "./components/ItemListContainer/itemDetailContainer";
+import { Routes, Route, Link } from "react-router-dom";
 
 
 export const App = () => {
@@ -20,6 +21,8 @@ export const App = () => {
 
   return (
     <div className="App">
+      <h1>Welcome to React Router!</h1>
+      
       <NavBar greeting="Hola" />
       <ItemListContainer greeting="Bienvenidos a CounterShop"/>
       <ItemList/>
@@ -31,8 +34,10 @@ export const App = () => {
           <li key={product}>{product}</li>
           ))}
         </ul>
+      
         
       </Section>
+      <Footer />
       
     </div>
   );
