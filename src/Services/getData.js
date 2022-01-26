@@ -35,10 +35,12 @@ const data = [
     }
 ]
 
-const getData = new Promise((resolve) => {
+
+
+const getProducts = new Promise((resolve) => {
     setTimeout(() => {
         resolve(data);
-    }, 5000);
+        }, 2000)
 });
 
-export default getData;
+export default getProducts;

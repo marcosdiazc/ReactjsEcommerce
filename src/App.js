@@ -1,8 +1,12 @@
 import "./App.css";
 import { NavBar } from "./components/navBar/navBar";
+import { Footer } from "./components/footer/footer";
 import { Section } from "./components/section/section";
 import { ItemListContainer } from "./components/ItemListContainer/ItemListContainer";
 import 'bootstrap/dist/css/bootstrap.min.css';
+import ItemList from "./components/ItemListContainer/ItemList";
+import Swal from 'sweetalert2';
+import ItemDetailContainer from "./components/ItemListContainer/itemDetailContainer";
 
 
 export const App = () => {
@@ -17,10 +21,9 @@ export const App = () => {
   return (
     <div className="App">
       <NavBar greeting="Hola" />
-      <ItemListContainer greeting="bienvenidos a codershop"/>
-      <Section title="welcome">
-        <p>Esta seccion es de bienvenida</p>
-      </Section>
+      <ItemListContainer greeting="Bienvenidos a CounterShop"/>
+      <ItemList/>
+      
       <Section title="products">
         <p>Esta seccion es de productos</p>
         <ul>
